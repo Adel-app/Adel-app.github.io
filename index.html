@@ -1,22 +1,22 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <title>MGS Codec</title>
 </head>
 
 <body>
   <div class="container-fluid">
     <audio autoplay>
-      <source src="sfx/codec-sound.mp3" type="audio/mp3">
+      <source src="sfx/mgs-alert.mp3" type="audio/mp3">
       Votre navigateur ne supporte pas l'élément audio.
     </audio>
 
     <div id="mgs-codec">
-
       <div id="svg-volume-indicator-total"></div>
       <div id="svg-volume-indicator"></div>
 
@@ -27,22 +27,25 @@
       <div class="actor-overlay img-right"></div>
       <img src="https://mezucore.neocities.org/mgs/otacon.gif" alt="actor 2" class="img-right">
       <div class="transcription">
-        <p><strong>Otacon:</strong> Snake, Je dois te demander quelque chose...</p>
-        <p><strong>Otacon:</strong> est ce que tu as vu ... le portfolio d'adel ?</p>
-        <p><strong>Snake: </strong> Non j'ai pas eu le temps , pour la mission alternance ?</p>
-        <p><strong>Otacon: </strong> Oui c'est urgent jette un coup d'oeil !</p>
-        <p><strong>Snake: </strong> Aaah okay laisse moi voir sa ....</p>
-        <p><strong>Otacon: </strong> Tiens <a href="https://adel-app.github.io/ff7" target="blank">la fréquence.</a> du
-          codec pour le voir.</p>
+        <p><strong>Otacon:</strong> Snake, je dois te demander quelque chose...</p>
+        <p><strong>Otacon:</strong> Est-ce que tu as vu le portfolio d'Adel ?</p>
+        <p><strong>Snake:</strong> Non, je n'ai pas eu le temps, c'est pour la mission alternance ?</p>
+        <p><strong>Otacon:</strong> Oui, c'est urgent, jette un coup d'œil !</p>
+        <p><strong>Snake:</strong> Ah, d'accord, laisse-moi voir ça...</p>
+        <p><strong>Otacon:</strong> Tiens, <a href="https://adel-app.github.io/ff7" target="_blank">la fréquence</a>
+          du codec pour le voir.</p>
       </div>
     </div>
     <div id="notes">
       <p>^ Appuie sur le dialogue pour avancer.</p>
       <p class="copyrights">
-      <p>Vector file is licensed under <a href="https://creativecommons.org/licenses/by/3.0/us/" target="_blank">CC BY
-          3.0 US</a>. JS is licensed under MIT License<br>
-        <a href="http://www.sub.wz.cz/sounds.html" target="_blank">Codec mp3 by sub.wz.cz. Original sounds are copyright
-          &copy; Konami Corporation.</a>
+      <p>Le fichier vectoriel est sous licence <a href="https://creativecommons.org/licenses/by/3.0/us/"
+          target="_blank">CC BY
+          3.0 US</a>. JS est sous licence MIT<br>
+        <a href="http://www.sub.wz.cz/sounds.html" target="_blank">Codec mp3 par sub.wz.cz. Les sons originaux sont la
+          propriété
+          de &copy; Konami Corporation.</a>
+      </p>
       </p>
     </div>
     <script src="js/jquery.js"></script>
@@ -52,12 +55,13 @@
       $(document).ready(function () {
         $('#mgs-codec').mgsCodec();
 
-        // add an example sound effect
+        // Ajoutez un exemple de son d'effet
         setTimeout(function () {
           document.querySelector('audio').play();
         }, 400);
       });
     </script>
+  </div>
 </body>
 
 </html>
