@@ -1,10 +1,3 @@
-/*!
-* Metal Gear Solid Codec.
-* (c) 2013 Chris Tabor <dxdstudio@gmail.com>
-* See license for more information
-* <3
-* https://github.com/christabor/metal-gear-codec/
-*/
 
 ; (function ($) {
 	$.fn.mgsCodec = function (options) {
