@@ -145,6 +145,7 @@ body {
 }
 
 #section {
+    color : white;
     position: absolute;
     margin: 35px 0px 0px 100px;
     width: 800px;
