@@ -8,7 +8,7 @@ let tokenHide = false; // Variable to store the boolean value if the extra menu 
 let tokenFile = 0; // Variable to store the present file selected.
 const img = document.createElement('img'); // Const to add the hand cursor.
 img.className = 'selected';
-img.src = '../img/FF7Cursor.png';
+img.src = 'https://www.dropbox.com/s/1pq4d1ksjv3tuoz/FF7Cursor.png?raw=1';
 const div = document.createElement('div'); // Const to add the shadow of the hand cursor.
 div.className = 'shadow';
 let move = new Audio(); // Variable of Audio kind to store and use move sound.
