@@ -43,32 +43,28 @@ let menuItems = document.querySelectorAll('#menu li');
     }, false);
     //Sets listener when a mouse is over a menu.
     document.body.addEventListener('mouseover', selectMouseOver);
-    //Sets listener when a key is pressed.
-    document.body.addEventListener('keydown', keyPressed);
-    //Sets listener when a click is made in the hand icons.
-    document.body.addEventListener('click', function (e) {
 
-        // Calling the changeScreen function depending of what hand icon was clicked with the file number to load.  
+    // Calling the changeScreen function depending of what hand icon was clicked with the file number to load.  
 
-        if (e.target.id == "left") {
+    if (e.target.id == "left") {
 
-            if (tokenFile > 0) {
-                changeScreen(--tokenFile);
-            } else {
-                tokenFile = 4;
-                changeScreen(tokenFile);
-            }
-        } else if (e.target.id == "right") {
-
-            if (tokenFile < 4) {
-                changeScreen(++tokenFile);
-            } else {
-                tokenFile = 0;
-                changeScreen(tokenFile);
-            }
+        if (tokenFile > 0) {
+            changeScreen(--tokenFile);
+        } else {
+            tokenFile = 4;
+            changeScreen(tokenFile);
         }
-    });
-})();
+    } else if (e.target.id == "right") {
+
+        if (tokenFile < 4) {
+            changeScreen(++tokenFile);
+        } else {
+            tokenFile = 0;
+            changeScreen(tokenFile);
+        }
+    }
+});
+;
 
 // FUNCTIONS========================================================================
 
