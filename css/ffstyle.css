@@ -64,7 +64,6 @@ h2 {
 
 body {
     background: black;
-    color: white;
 }
 
 #group {
@@ -145,7 +144,7 @@ body {
 }
 
 #section {
-    color : white;
+    color: white;
     position: absolute;
     margin: 35px 0px 0px 100px;
     width: 800px;

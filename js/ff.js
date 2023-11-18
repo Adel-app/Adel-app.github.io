@@ -206,13 +206,13 @@ function loadFile(archive) {
                 firstPosition: "front", firstName: "Cloud", firstLevel: 9, firstStatus: "", firstHpMin: 333, firstHpMax: 333,
                 firstMpMin: 63, firstMpMax: 63, firstLevelBar: 100, firstLimitBar: 25, firstLimitLevel: 1, firstActive: "yes",
 
-                secondPosition: "front", secondName: "Barret", secondLevel: 7, secondStatus: "", secondHpMin: 341, secondHpMax: 341,
+                secondPosition: "front", secondName: "Tifa", secondLevel: 7, secondStatus: "", secondHpMin: 341, secondHpMax: 341,
                 secondMpMin: 48, secondMpMax: 48, secondLevelBar: 80, secondLimitBar: 60, secondLimitLevel: 1, secondActive: "yes",
 
-                thirdPosition: "front", thirdName: "Tifa", thirdLevel: 5, thirdStatus: "", thirdHpMin: 284, thirdHpMax: 284,
+                thirdPosition: "front", thirdName: "Red XIII", thirdLevel: 5, thirdStatus: "", thirdHpMin: 284, thirdHpMax: 284,
                 thirdMpMin: 41, thirdMpMax: 41, thirdLevelBar: 4, thirdLimitBar: 30, thirdLimitLevel: 1, thirdActive: "yes",
 
-                gil: 435, location: "Sector 7 Slums", music: "Barret's Theme", phsExist: "no", phs: "no", save: "yes"
+                gil: 435, location: "Sector 7 Slums", music: "Flowers Blooming in the Church", phsExist: "no", phs: "no", save: "yes"
             };
             break;
         case 1:
@@ -227,7 +227,7 @@ function loadFile(archive) {
                 thirdPosition: "", thirdName: "", thirdLevel: "", thirdStatus: "", thirdHpMin: "", thirdHpMax: "",
                 thirdMpMin: "", thirdMpMax: "", thirdLevelBar: "", thirdLimitBar: "", thirdLimitLevel: "", thirdActive: "no",
 
-                gil: 963, location: "Aerith's House", music: "Flowers Blooming in the Church", phsExist: "no", phs: "no", save: "yes"
+                gil: 963, location: "Aerith's House", music: "Barret's Theme", phsExist: "no", phs: "no", save: "yes"
             };
             break;
         case 2:
