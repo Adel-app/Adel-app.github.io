@@ -43,28 +43,32 @@ let menuItems = document.querySelectorAll('#menu li');
     }, false);
     //Sets listener when a mouse is over a menu.
     document.body.addEventListener('mouseover', selectMouseOver);
+    //Sets listener when a key is pressed.
+    document.body.addEventListener('keydown', keyPressed);
+    //Sets listener when a click is made in the hand icons.
+    document.body.addEventListener('click', function (e) {
 
-    // Calling the changeScreen function depending of what hand icon was clicked with the file number to load.  
+        // Calling the changeScreen function depending of what hand icon was clicked with the file number to load.  
 
-    if (e.target.id == "left") {
+        if (e.target.id == "left") {
 
-        if (tokenFile > 0) {
-            changeScreen(--tokenFile);
-        } else {
-            tokenFile = 4;
-            changeScreen(tokenFile);
+            if (tokenFile > 0) {
+                changeScreen(--tokenFile);
+            } else {
+                tokenFile = 4;
+                changeScreen(tokenFile);
+            }
+        } else if (e.target.id == "right") {
+
+            if (tokenFile < 4) {
+                changeScreen(++tokenFile);
+            } else {
+                tokenFile = 0;
+                changeScreen(tokenFile);
+            }
         }
-    } else if (e.target.id == "right") {
-
-        if (tokenFile < 4) {
-            changeScreen(++tokenFile);
-        } else {
-            tokenFile = 0;
-            changeScreen(tokenFile);
-        }
-    }
-});
-;
+    });
+})();
 
 // FUNCTIONS========================================================================
 
@@ -199,16 +203,16 @@ function loadFile(archive) {
         case 0:
             file = {
 
-                firstPosition: "front", firstName: "adel", firstLevel: 9, firstStatus: "", firstHpMin: 333, firstHpMax: 333,
+                firstPosition: "front", firstName: "Cloud", firstLevel: 9, firstStatus: "", firstHpMin: 333, firstHpMax: 333,
                 firstMpMin: 63, firstMpMax: 63, firstLevelBar: 100, firstLimitBar: 25, firstLimitLevel: 1, firstActive: "yes",
 
-                secondPosition: "front", secondName: "Tifa", secondLevel: 7, secondStatus: "", secondHpMin: 341, secondHpMax: 341,
+                secondPosition: "front", secondName: "Barret", secondLevel: 7, secondStatus: "", secondHpMin: 341, secondHpMax: 341,
                 secondMpMin: 48, secondMpMax: 48, secondLevelBar: 80, secondLimitBar: 60, secondLimitLevel: 1, secondActive: "yes",
 
-                thirdPosition: "front", thirdName: "Red XIII", thirdLevel: 5, thirdStatus: "", thirdHpMin: 284, thirdHpMax: 284,
+                thirdPosition: "front", thirdName: "Tifa", thirdLevel: 5, thirdStatus: "", thirdHpMin: 284, thirdHpMax: 284,
                 thirdMpMin: 41, thirdMpMax: 41, thirdLevelBar: 4, thirdLimitBar: 30, thirdLimitLevel: 1, thirdActive: "yes",
 
-                gil: 435, location: "Sector 7 Slums", music: "Flowers Blooming in the Church", phsExist: "no", phs: "no", save: "yes"
+                gil: 435, location: "Sector 7 Slums", music: "Barret's Theme", phsExist: "no", phs: "no", save: "yes"
             };
             break;
         case 1:
@@ -223,7 +227,7 @@ function loadFile(archive) {
                 thirdPosition: "", thirdName: "", thirdLevel: "", thirdStatus: "", thirdHpMin: "", thirdHpMax: "",
                 thirdMpMin: "", thirdMpMax: "", thirdLevelBar: "", thirdLimitBar: "", thirdLimitLevel: "", thirdActive: "no",
 
-                gil: 963, location: "Aerith's House", music: "Barret's Theme", phsExist: "no", phs: "no", save: "yes"
+                gil: 963, location: "Aerith's House", music: "Flowers Blooming in the Church", phsExist: "no", phs: "no", save: "yes"
             };
             break;
         case 2:
