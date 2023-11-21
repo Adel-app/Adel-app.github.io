@@ -1,70 +1,89 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  <title>Portfolio Adel BOUZID</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.scss" rel="stylesheet" type="text/css">
+
+    <title>Portfolio adel bouzid</title>
 </head>
 
 <body>
-  <div class="container-fluid">
-    <audio autoplay="true">
-      <source id="music" src="sfx/codec-sound.mp3" type="audio/mp3" />
-    </audio>
-
-    <audio autoplay="true" loop>
-      <source id="music" src="sfx/mgs-alert.mp3" type="audio/mp3" />
-    </audio>
-
-    <div id="mgs-codec">
-      <div id="svg-volume-indicator-total"></div>
-      <div id="svg-volume-indicator"></div>
-
-      <div class="actor-overlay img-left"></div>
-      <img src="img/fuzzy.gif" class="left-cover" alt="fuzzy animation">
-      <img src="img/snake.gif" alt="actor 1" class="img-left">
-      <img src="img/fuzzy.gif" class="right-cover " alt="fuzzy animation">
-      <div class="actor-overlay img-right"></div>
-      <img src="img/otacon.gif" alt="actor 2" class="img-right">
-      <div class="transcription">
-        <p><strong>Otacon:</strong> Snake, je dois te demander quelque chose...</p>
-        <p><strong>Otacon:</strong> Est-ce que tu as vu le portfolio d'Adel ?</p>
-        <p><strong>Snake:</strong> Non, je n'ai pas eu le temps, c'est pour la mission alternance ?</p>
-        <p><strong>Otacon:</strong> Oui, c'est urgent, jette un coup d'œil !</p>
-        <p><strong>Snake:</strong> Ah, d'accord, laisse-moi voir ça...</p>
-        <p><strong>Otacon:</strong> Tiens, <a href="https://adel-app.github.io/ff7" target="_blank">la fréquence</a>
-          du codec pour le voir.</p>
-      </div>
+    <div class="container">
+        <nav>
+            <div class="nav-btn" data-target="home"><span>HOME</span></div>
+            <div class="nav-btn" data-target="skill"><span>SKILL</span></div>
+            <div class="nav-btn" data-target="contact"><span>CONTACT</span></div>
+        </nav>
     </div>
-    <div id="notes">
-      <p>^ Appuie sur le dialogue pour avancer.</p>
-      <p class="copyrights">
-      <p>Le fichier vectoriel est sous licence <a href="https://creativecommons.org/licenses/by/3.0/us/"
-          target="_blank">CC BY
-          3.0 US</a>. JS est sous licence MIT<br>
-        <a href="http://www.sub.wz.cz/sounds.html" target="_blank">Codec mp3 par sub.wz.cz. Les sons originaux sont la
-          propriété
-          de &copy; Konami Corporation.</a>
-      </p>
-      </p>
-    </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/mgs-player.js"></script>
+    <section class="data-container" data-container="home">
+        <h2>Home - ホーム</h2>
+        <div class="card">
+            <p>test card</p>
+        </div>
+        <h3>Mes projets</h3>
+        <div class="card">
+            <div>
+                <img src="img/snake.gif" alt="carte vip de nos membres">
 
-    <script type="text/javascript" defer>
-      $(document).ready(function () {
-        $('#mgs-codec').mgsCodec();
+                <p>test card</p>
+                <a href=""></a>
+            </div>
+        </div>
 
-        // Ajoutez un exemple de son d'effet
-        setTimeout(function () {
-          document.querySelector('audio').play();
-        }, 400);
-      });
-    </script>
-  </div>
+    </section>
+
+    <section class="data-container" data-container="skill" style="display: none">
+        <h2>SKILL <small>- スキル</small></h2>
+        <div class="nier-list">
+            <ul class="">
+                <li class="active">Front-end</li>
+
+                <li>Html
+                    <p>CSS</p>
+                    <p>Sass</p>
+                    <p>Javascript</p>
+                    <p>Boostrap</p>
+                    <p>Wordpress</p>
+                    <p>Ajax</p>
+
+                </li>
+                <li class="active">Back-end</li>
+
+                <li>PHP
+                    <p>LUA</p>
+                    <p>MySQL</p>
+                    <p>Javascript</p>
+                    <p>Symphony</p>
+                </li>
+
+                <li class="active">Langues étrangères</li>
+
+                <li>Anglais : C1
+                    <p>Espagnol : C1</p>
+                    <p>Portugais : B2</p>
+                    <p>Japonais : A1</p>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="data-container" data-container="contact" style="display: none">
+        <h2>CONTACT <small>- お問い合わせ</small></h2>
+        <img src="img/carte-membre.png" alt="carte vip de nos membres" class="large-45 small-80 small-width">
+        <a href="https://www.linkedin.com/in/adel-dev-app/" title="lien linkedin">Contactez-moi par Linkedin</a>
+
+        <a href="tel:+33664681604" title="lien pour appeler">Contactez-moi par téléphone</a>
+        <a href="mailto:adel.bouzid@hotmail.fr">Contactez-moi par e-mail</a>
+    </section>
+
+
+    <footer>
+        <script src="js/jquery.js"></script>
+        <script src="js/fonctions.js"></script>
+    </footer>
 </body>
 
 </html>

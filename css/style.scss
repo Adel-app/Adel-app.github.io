@@ -1,165 +1,216 @@
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+$color-main: #4e493a;
+$background-main: #beb89f;
 
-@font-face {
-  font-family: helvetica;
-  src: url(https://mezucore.neocities.org/mgs/Helvetica.ttf)
+.html {
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
-  background-color: #091A17;
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  color: #fff;
-  font-size: 12px;
+  background: #ccc7b1;
+  text-transform: uppercase;
 }
 
-.container-fluid {
-  width: 702px;
-  margin: 0 auto;
+.arrow-right {
+  border-right: 20px solid lighten($color-main, 10%);
 }
 
-#mgs-codec {
-  background: transparent url(https://mezucore.neocities.org/mgs/mgs-codec-container.svg) no-repeat 0 0;
-  background-size: cover;
-  width: 702px;
-  height: 448px;
-  margin: 1em auto;
+.line-border {
+  &:before {
+    content: '';
+    border-left: 5px solid $background-main;
+    margin-right: 15px;
+    margin-left: 3px;
+  }
+
+  border-left: 15px solid $background-main;
+}
+
+.hover-class {
+  cursor: pointer;
+  background: $background-main;
+  color: $color-main;
+
+  &:hover {
+    background: $color-main;
+    color: $background-main;
+
+    * {
+      color: $background-main;
+    }
+  }
+}
+
+.card {
+  background: #e4e0c0;
+  color: $color-main;
+  box-shadow: 2px 2px 0 2px #a59e83;
+  padding: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-main;
+  text-shadow: 5px 5px 0 rgba(146, 140, 126, 0.37);
+  font-weight: 400;
+  letter-spacing: 10px;
+  opacity: .8;
+
+  small {
+    font-size: 50%;
+  }
+}
+
+h1,
+h2 {
+  font-size: 42px;
+}
+
+h2 {
+  &:after {
+    content: '_';
+    animation: 4s blink infinite linear;
+  }
+}
+
+p,
+span {
+  color: $color-main;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+
+nav {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  //position: relative;
+  @extend .line-border;
+
+  &:after {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid $color-main;
+    opacity: .8;
+  }
+
+  //justify-content: space-around;
+
+  div {
+    flex: 1;
+    background: $background-main;
+    max-width: 150px;
+    margin-right: 30px;
+    opacity: .8;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      background: $color-main;
+
+      span {
+        color: $background-main;
+      }
+
+      &:before {
+        content: ":";
+        position: absolute;
+        left: -13px;
+        top: calc(50% - 13px);
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-main;
+      }
+    }
+
+    span {
+      color: $color-main;
+      display: inline-block;
+      padding: 5px;
+      font-size: 20px;
+      padding: 5px;
+      padding-left: 30px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        left: 5px;
+        content: '◼︎';
+        margin-right: 3px;
+        vertical-align: middle;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.nier-list {
+
+  //@extend .line-border;
+  &:before {
+    content: '';
+    border-left: 5px solid $background-main;
+    margin-right: 15px;
+    margin-left: 3px;
+    position: absolute;
+    height: 100%;
+    //left: 0;
+  }
+
+  border-left: 15px solid $background-main;
   position: relative;
-  z-index: 100;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 30px;
+  }
+
+  li {
+    list-style: none;
+    @extend .hover-class;
+    margin-bottom: 30px;
+    max-width: 30vw;
+    padding: 5px;
+    position: relative;
+
+    &:hover {
+      &:before {
+        content: ":";
+        position: absolute;
+        left: -16px;
+        top: calc(50% - 12px);
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-main;
+      }
+    }
+
+    &.active {
+      position: relative;
+      background: $color-main;
+      color: $background-main;
+      @extend .arrow-right;
+    }
+  }
 }
 
-#mgs-code svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
-#mgs-codec audio {
-  display: none;
-  visibility: hidden;
-}
+@keyframes blink {
+  0% {}
 
-#mgs-codec .img-left,
-#mgs-codec .img-right,
-#mgs-codec .left-cover,
-#mgs-codec .right-cover {
-  position: absolute;
-  z-index: 9;
-  width: 140px;
-  height: 180px;
-  border: 1px solid #A6D7B2;
-  top: 25px;
-}
+  50% {
+    opacity: .5;
+  }
 
-#mgs-codec .actor-overlay {
-  background-color: #A6D7B2;
-  opacity: 0.1;
-  z-index: 99;
-}
-
-#mgs-codec .left-cover,
-#mgs-codec .right-cover {
-  z-index: 1000;
-  opacity: 0.1;
-}
-
-#mgs-codec .img-left,
-#mgs-codec .left-cover {
-  left: 50px;
-}
-
-#mgs-codec .img-right,
-#mgs-codec .right-cover {
-  right: 50px;
-}
-
-#mgs-codec .transcription {
-  font-size: 25px;
-  font-family: helvetica;
-  position: absolute;
-  bottom: 10px;
-  left: 80px;
-  height: 37%;
-  z-index: 100;
-  width: 78%;
-}
-
-#mgs-codec .transcription p {
-  white-space: pre-line;
-  text-overflow: ellipsis;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#svg-volume-indicator,
-#svg-volume-indicator-total {
-  background-size: cover;
-  height: 134px;
-  width: 227px;
-  position: absolute;
-  top: 44px;
-  left: 239px;
-  z-index: 99;
-}
-
-#svg-volume-indicator {
-  background: transparent url(https://mezucore.neocities.org/mgs/codec-volume-bg.svg) no-repeat 0 0;
-  z-index: 96;
-}
-
-#svg-volume-indicator-total {
-  background: transparent url(https://mezucore.neocities.org/mgs/codec-volume-bg-total.svg) no-repeat 0 0;
-  z-index: 97;
-}
-
-#svg-volume-indicator,
-#svg-volume-indicator-total {
-  bottom: 255px;
-  background-size: cover;
-  left: 239px;
-}
-
-code {
-  color: #A6D7B2;
-  background-color: black;
-}
-
-.btn-primary {
-  background-color: #091A17;
-  border-color: #30544F;
-  border-radius: 0;
-  border-width: 2px;
-}
-
-.btn-primary:hover {
-  background-color: #A6D7B2;
-  border-color: #A6D7B2;
-  color: #30544F;
-}
-
-a {
-  color: #30544F;
-}
-
-a:hover {
-  color: #A6D7B2;
-}
-
-#notes {
-  width: 65%;
-  margin: 0 auto;
-}
-
-#notes strong {
-  color: #A6D7B2;
-}
-
-.copyrights {
-  font-size: 10px;
-  margin: 1em 0;
-  text-align: center;
 }
