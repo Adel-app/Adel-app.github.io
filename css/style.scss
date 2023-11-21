@@ -104,26 +104,6 @@ nav {
     opacity: .8;
   }
 
-  a .btn {
-    background-color: $color-main;
-    color: $background-main;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 6px 33px;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: $color-main;
-      background-color: $background-main;
-      border: 1px solid $color-main;
-    }
-  }
-
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-
-  }
 
   //justify-content: space-around;
 
@@ -173,6 +153,27 @@ nav {
       }
     }
   }
+}
+
+.btn {
+  background-color: $color-main;
+  color: $background-main;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 6px 33px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $color-main;
+    background-color: $background-main;
+    border: 1px solid $color-main;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .nier-list {
