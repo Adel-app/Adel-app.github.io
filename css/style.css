@@ -3,8 +3,13 @@
   font-family: "Raleway", sans-serif;
 }
 
-body:not(.card p) {
+body {
   background: #ccc7b1;
+}
+
+h1,
+h2,
+h3 {
   text-transform: uppercase;
 }
 
@@ -146,6 +151,7 @@ nav div span:before {
   display: inline-block;
   padding: 6px 33px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 .btn:hover {
   color: #4e493a;
