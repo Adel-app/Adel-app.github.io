@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: helvetica;
+  src: url(https://mezucore.neocities.org/mgs/Helvetica.ttf);
+}
+body {
+  background-color: #091A17;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #fff;
+  font-size: 12px;
+}
+
+.container-fluid {
+  width: 702px;
+  margin: 0 auto;
+}
+
+#mgs-codec {
+  background: transparent url(https://mezucore.neocities.org/mgs/mgs-codec-container.svg) no-repeat 0 0;
+  background-size: cover;
+  width: 702px;
+  height: 448px;
+  margin: 1em auto;
+  position: relative;
+  z-index: 100;
+}
+
+#mgs-code svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#mgs-codec audio {
+  display: none;
+  visibility: hidden;
+}
+
+#mgs-codec .img-left,
+#mgs-codec .img-right,
+#mgs-codec .left-cover,
+#mgs-codec .right-cover {
+  position: absolute;
+  z-index: 9;
+  width: 140px;
+  height: 180px;
+  border: 1px solid #A6D7B2;
+  top: 25px;
+}
+
+#mgs-codec .actor-overlay {
+  background-color: #A6D7B2;
+  opacity: 0.1;
+  z-index: 99;
+}
+
+#mgs-codec .left-cover,
+#mgs-codec .right-cover {
+  z-index: 1000;
+  opacity: 0.1;
+}
+
+#mgs-codec .img-left,
+#mgs-codec .left-cover {
+  left: 50px;
+}
+
+#mgs-codec .img-right,
+#mgs-codec .right-cover {
+  right: 50px;
+}
+
+#mgs-codec .transcription {
+  font-size: 25px;
+  font-family: helvetica;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+  height: 37%;
+  z-index: 100;
+  width: 78%;
+}
+
+#mgs-codec .transcription p {
+  white-space: pre-line;
+  text-overflow: ellipsis;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#svg-volume-indicator,
+#svg-volume-indicator-total {
+  background-size: cover;
+  height: 134px;
+  width: 227px;
+  position: absolute;
+  top: 44px;
+  left: 239px;
+  z-index: 99;
+}
+
+#svg-volume-indicator {
+  background: transparent url(https://mezucore.neocities.org/mgs/codec-volume-bg.svg) no-repeat 0 0;
+  z-index: 96;
+}
+
+#svg-volume-indicator-total {
+  background: transparent url(https://mezucore.neocities.org/mgs/codec-volume-bg-total.svg) no-repeat 0 0;
+  z-index: 97;
+}
+
+#svg-volume-indicator,
+#svg-volume-indicator-total {
+  bottom: 255px;
+  background-size: cover;
+  left: 239px;
+}
+
+code {
+  color: #A6D7B2;
+  background-color: black;
+}
+
+.btn-primary {
+  background-color: #091A17;
+  border-color: #30544F;
+  border-radius: 0;
+  border-width: 2px;
+}
+
+.btn-primary:hover {
+  background-color: #A6D7B2;
+  border-color: #A6D7B2;
+  color: #30544F;
+}
+
+a {
+  color: #30544F;
+}
+
+a:hover {
+  color: #A6D7B2;
+}
+
+#notes {
+  width: 65%;
+  margin: 0 auto;
+}
+
+#notes strong {
+  color: #A6D7B2;
+}
+
+.copyrights {
+  font-size: 10px;
+  margin: 1em 0;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

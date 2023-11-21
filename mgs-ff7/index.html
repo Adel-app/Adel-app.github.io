@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <title>Portfoio Adel BOUZID</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <audio autoplay="true">
+      <source id="music" src="sfx/codec-sound.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio autoplay="true" loop>
+      <source id="music" src="sfx/mgs-alert.mp3" type="audio/mp3" />
+    </audio>
+
+    <div id="mgs-codec">
+      <div id="svg-volume-indicator-total"></div>
+      <div id="svg-volume-indicator"></div>
+
+      <div class="actor-overlay img-left"></div>
+      <img src="img/fuzzy.gif" class="left-cover" alt="fuzzy animation">
+      <img src="img/snake.gif" alt="actor 1" class="img-left">
+      <img src="img/fuzzy.gif" class="right-cover " alt="fuzzy animation">
+      <div class="actor-overlay img-right"></div>
+      <img src="img/otacon.gif" alt="actor 2" class="img-right">
+      <div class="transcription">
+        <p><strong>Otacon:</strong> Snake, je dois te demander quelque chose...</p>
+        <p><strong>Otacon:</strong> Est-ce que tu as vu le portfolio d'Adel ?</p>
+        <p><strong>Snake:</strong> Non, je n'ai pas eu le temps, c'est pour la mission alternance ?</p>
+        <p><strong>Otacon:</strong> Oui, c'est urgent, jette un coup d'œil !</p>
+        <p><strong>Snake:</strong> Ah, d'accord, laisse-moi voir ça...</p>
+        <p><strong>Otacon:</strong> Tiens, <a href="https://adel-app.github.io/ff7" target="_blank">la fréquence</a>
+          du codec pour le voir.</p>
+      </div>
+    </div>
+    <div id="notes">
+      <p>^ Appuie sur le dialogue pour avancer.</p>
+      <p class="copyrights">
+      <p>Le fichier vectoriel est sous licence <a href="https://creativecommons.org/licenses/by/3.0/us/"
+          target="_blank">CC BY
+          3.0 US</a>. JS est sous licence MIT<br>
+        <a href="http://www.sub.wz.cz/sounds.html" target="_blank">Codec mp3 par sub.wz.cz. Les sons originaux sont la
+          propriété
+          de &copy; Konami Corporation.</a>
+      </p>
+      </p>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/mgs-player.js"></script>
+
+    <script type="text/javascript" defer>
+      $(document).ready(function () {
+        $('#mgs-codec').mgsCodec();
+
+        // Ajoutez un exemple de son d'effet
+        setTimeout(function () {
+          document.querySelector('audio').play();
+        }, 400);
+      });
+    </script>
+  </div>
+</body>
+
+</html>
