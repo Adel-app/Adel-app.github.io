@@ -104,6 +104,21 @@ nav {
     opacity: .8;
   }
 
+  .btn {
+    background-color: $background-main;
+    color: $color-main;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 6px 33px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $background-main;
+      background-color: $color-main;
+      border: 1px solid $background-main;
+    }
+  }
+
   //justify-content: space-around;
 
   div {
