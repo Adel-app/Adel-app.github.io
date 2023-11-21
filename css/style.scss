@@ -5,7 +5,7 @@ $background-main: #beb89f;
   font-family: 'Raleway', sans-serif;
 }
 
-body {
+body:not(.card p) {
   background: #ccc7b1;
   text-transform: uppercase;
 }
