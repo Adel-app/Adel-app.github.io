@@ -104,18 +104,18 @@ nav {
     opacity: .8;
   }
 
-  .btn {
-    background-color: $background-main;
-    color: $color-main;
+  a .btn {
+    background-color: $color-main;
+    color: $background-main;
     text-transform: uppercase;
     display: inline-block;
     padding: 6px 33px;
     transition: all 0.3s ease;
 
     &:hover {
-      color: $background-main;
-      background-color: $color-main;
-      border: 1px solid $background-main;
+      color: $color-main;
+      background-color: $background-main;
+      border: 1px solid $color-main;
     }
   }
 

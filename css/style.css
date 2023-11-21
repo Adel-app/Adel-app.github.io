@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 .html {
   font-family: "Raleway", sans-serif;
 }
@@ -9,39 +8,30 @@ body {
   text-transform: uppercase;
 }
 
-.arrow-right,
-.nier-list li.active {
+.arrow-right, .nier-list li.active {
   border-right: 20px solid #6b6450;
 }
 
-.line-border,
-nav {
+.line-border, nav {
   border-left: 15px solid #beb89f;
 }
-
-.line-border:before,
-nav:before {
+.line-border:before, nav:before {
   content: "";
   border-left: 5px solid #beb89f;
   margin-right: 15px;
   margin-left: 3px;
 }
 
-.hover-class,
-.nier-list li {
+.hover-class, .nier-list li {
   cursor: pointer;
   background: #beb89f;
   color: #4e493a;
 }
-
-.hover-class:hover,
-.nier-list li:hover {
+.hover-class:hover, .nier-list li:hover {
   background: #4e493a;
   color: #beb89f;
 }
-
-.hover-class:hover *,
-.nier-list li:hover * {
+.hover-class:hover *, .nier-list li:hover * {
   color: #beb89f;
 }
 
@@ -64,7 +54,6 @@ h6 {
   letter-spacing: 10px;
   opacity: 0.8;
 }
-
 h1 small,
 h2 small,
 h3 small,
@@ -99,7 +88,6 @@ nav {
   margin-top: 40px;
   margin-bottom: 60px;
 }
-
 nav:after {
   position: absolute;
   top: 90px;
@@ -109,27 +97,23 @@ nav:after {
   border-bottom: 2px solid #4e493a;
   opacity: 0.8;
 }
-
-nav .btn {
-  background-color: #beb89f;
-  color: #4e493a;
+nav a .btn {
+  background-color: #4e493a;
+  color: #beb89f;
   text-transform: uppercase;
   display: inline-block;
   padding: 6px 33px;
   transition: all 0.3s ease;
 }
-
-nav .btn:hover {
-  color: #beb89f;
-  background-color: #4e493a;
-  border: 1px solid #beb89f;
+nav a .btn:hover {
+  color: #4e493a;
+  background-color: #beb89f;
+  border: 1px solid #4e493a;
 }
-
 nav .flex {
   display: flex;
   flex-wrap: wrap;
 }
-
 nav div {
   flex: 1;
   background: #beb89f;
@@ -139,15 +123,12 @@ nav div {
   cursor: pointer;
   position: relative;
 }
-
 nav div:hover {
   background: #4e493a;
 }
-
 nav div:hover span {
   color: #beb89f;
 }
-
 nav div:hover:before {
   content: ":";
   position: absolute;
@@ -157,7 +138,6 @@ nav div:hover:before {
   font-weight: bold;
   color: #4e493a;
 }
-
 nav div span {
   color: #4e493a;
   display: inline-block;
@@ -167,7 +147,6 @@ nav div span {
   padding-left: 30px;
   position: relative;
 }
-
 nav div span:before {
   position: absolute;
   left: 5px;
@@ -181,7 +160,6 @@ nav div span:before {
   border-left: 15px solid #beb89f;
   position: relative;
 }
-
 .nier-list:before {
   content: "";
   border-left: 5px solid #beb89f;
@@ -190,13 +168,11 @@ nav div span:before {
   position: absolute;
   height: 100%;
 }
-
 .nier-list ul {
   margin: 0;
   padding: 0;
   margin-left: 30px;
 }
-
 .nier-list li {
   list-style: none;
   margin-bottom: 30px;
@@ -204,7 +180,6 @@ nav div span:before {
   padding: 5px;
   position: relative;
 }
-
 .nier-list li:hover:before {
   content: ":";
   position: absolute;
@@ -214,7 +189,6 @@ nav div span:before {
   font-weight: bold;
   color: #4e493a;
 }
-
 .nier-list li.active {
   position: relative;
   background: #4e493a;
@@ -225,6 +199,4 @@ nav div span:before {
   50% {
     opacity: 0.5;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
