@@ -29,3 +29,24 @@
     });
 
 })();
+
+//mp4
+document.addEventListener('DOMContentLoaded', function () {
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const videoModal = document.getElementById('videoModal');
+
+    openModalBtn.addEventListener('click', function () {
+        videoModal.style.display = 'block';
+    });
+
+    closeModalBtn.addEventListener('click', function () {
+        videoModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target === videoModal) {
+            videoModal.style.display = 'none';
+        }
+    });
+});
