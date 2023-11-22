@@ -301,3 +301,27 @@ nav {
   }
 
 }
+
+/* affichage inférieure à 964px */
+@media all and (max-width: 964px) {
+  .small-justify {
+    justify-content: center;
+  }
+
+  .small-place {
+    place-content: center;
+  }
+
+  .small-100 {
+    width: 100%;
+  }
+
+  .small-80 {
+    width: 80%;
+  }
+
+  .small-50 {
+    width: 50%;
+  }
+
+}
