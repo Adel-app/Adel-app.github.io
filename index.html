@@ -78,65 +78,43 @@
 
         <h3>Projets en LUA</h3>
         <div class="card flex justify-around">
-
             <div class="large-33">
                 <img src="img/pong.png" alt="carte vip de nos membres" class="large-100">
-
-                <p>Pong à deux joueurs : le 1er jeu que j'ai coder grâce à gamecodeur une formation que je suit en ligne
-                    en plus de la 3w Academy . Le plus complexe à été de gérer les collisions , une fois cela assimilé
-                    on peux s'amuser à rajouter des fonctionnalités et effets lumineux !</p>
-                <button class="btn" id="openModalBtn">Ouvrir la Vidéo</button>
-
-                <div id="videoModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close" id="closeModalBtn">&times;</span>
-                        <video width="560" height="315" controls>
-                            <source src="img/pong.mp4" type="video/mp4">
-                            Votre navigateur ne prend pas en charge la balise vidéo.
-                        </video>
-                    </div>
-                </div>
+                <p>Pong à deux joueurs : le 1er jeu que j'ai codé grâce à GameCodeur, une formation que je suis en ligne
+                    en plus de la 3W Academy. Le plus complexe a été de gérer les collisions, une fois cela assimilé, on
+                    peut s'amuser à rajouter des fonctionnalités et des effets lumineux !</p>
+                <button class="btn openModalBtn" data-video="img/pong.mp4">Ouvrir la Vidéo</button>
             </div>
+
             <div class="large-33">
                 <img src="img/casse.png" alt="carte vip de nos membres" class="large-100">
-
-                <p>Casse brique : le second jeu , il reprend les bases du pong pour les collisions , le jeu est jouable
-                    à la souris et au clavier. Le plus complexe à été la mise de la grille et les conditions si une
-                    brique est toucher elle doit disparaitre.Je me suis amuser à ajouter un systeme de telekinésie ,
-                    même en l'air la balle peut changer de trajectoire.</p>
-                <button class="btn" id="openModalBtn">Ouvrir la Vidéo</button>
-
-                <div id="videoModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close" id="closeModalBtn">&times;</span>
-                        <video width="560" height="315" controls>
-                            <source src="img/casse.mp4" type="video/mp4">
-                            Votre navigateur ne prend pas en charge la balise vidéo.
-                        </video>
-                    </div>
-                </div>
+                <p>Casse-brique : le second jeu, il reprend les bases du pong pour les collisions, le jeu est jouable à
+                    la souris et au clavier. Le plus complexe a été la mise de la grille et les conditions si une brique
+                    est touchée, elle doit disparaître. Je me suis amusé à ajouter un système de télékinésie, même en
+                    l'air, la balle peut changer de trajectoire.</p>
+                <button class="btn openModalBtn" data-video="img/casse.mp4">Ouvrir la Vidéo</button>
             </div>
+
             <div class="large-33">
                 <img src="img/lunar.png" alt="carte vip de nos membres" class="large-100">
+                <p>Lunar Lander : Le troisième jeu est plus une simulation de navette qu'un jeu. Le plus complexe a été
+                    de comprendre le système de l'inertie dans l'espace. J'ai beaucoup aimé apprendre cela. J'ai ajouté
+                    une musique d'ambiance dans le jeu et j'aimerais ajouter un système de tir plus tard.</p>
+                <button class="btn openModalBtn" data-video="img/lunar.mp4">Ouvrir la Vidéo</button>
+            </div>
 
-                <p>Lunar Lander : Le troisième jeu est plus une simulation de navette qu'un jeu .Le plus complexe à été
-                    de comprendre le système de l'inertie dans l'espace , j'ai beaucoup aimer apprendre cela j'ai
-                    ajouter une musique d'ambiance dans le jeu et j'aimerais ajouter un systeme de shooter plus tard</p>
-                <button class="btn" id="openModalBtn">Ouvrir la Vidéo</button>
+            <!-- ... Autres éléments ... -->
 
-                <div id="videoModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close" id="closeModalBtn">&times;</span>
-                        <video width="560" height="315" controls>
-                            <source src="img/lunar.mp4" type="video/mp4">
-                            Votre navigateur ne prend pas en charge la balise vidéo.
-                        </video>
-                    </div>
+            <div id="videoModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeModalBtn">&times;</span>
+                    <video id="modalVideo" width="560" height="315" controls>
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
                 </div>
             </div>
         </div>
 
-        </div>
 
     </section>
 
