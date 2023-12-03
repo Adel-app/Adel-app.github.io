@@ -1,36 +1,31 @@
 (function () {
-    var navBtn = $('.nav-btn');
-    var dataContainers = $('.data-container');
+    const navBtns = $('.nav-btn');
+    const dataContainers = $('.data-container');
 
     function toggleView(target) {
-        $(dataContainers).hide();
+        dataContainers.hide();
 
-        var text = $("[data-container='" + target + "'] h2").text();
-        $("[data-container='" + target + "'] h2").text('_');
+        const textContainer = $(`[data-container='${target}'] h2`);
+        const text = textContainer.text();
+        textContainer.text('_').show();
 
-        $("[data-container='" + target + "']").show();
-
-        var newText = '';
-        // write the text
-        (function myLoop(i) {
-            setTimeout(function () {
-                if (i == text.length) {
-                    return;
-                }
-                newText += text.charAt(i);
-                $("[data-container='" + target + "'] h2").text(newText);
-                if (++i) myLoop(i);
-            }, 40)
-        })(0);
+        let newText = '';
+        Array.from(text).forEach((char, i) => {
+            setTimeout(() => {
+                newText += char;
+                textContainer.text(newText);
+            }, 40 * i);
+        });
     }
-    $(navBtn).on('click', function (ev) {
-        var target = $(this).attr('data-target');
+
+    navBtns.on('click', function () {
+        const target = $(this).attr('data-target');
         toggleView(target);
     });
 
 })();
 
-//mp4
+// mp4
 document.addEventListener('DOMContentLoaded', function () {
     const openModalBtns = document.querySelectorAll('.openModalBtn');
     const closeModalBtn = document.getElementById('closeModalBtn');
@@ -45,15 +40,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    closeModalBtn.addEventListener('click', function () {
+    const closeModal = function () {
         modalVideo.pause();
         videoModal.style.display = 'none';
-    });
+    };
+
+    closeModalBtn.addEventListener('click', closeModal);
 
     window.addEventListener('click', function (event) {
         if (event.target === videoModal) {
-            modalVideo.pause();
-            videoModal.style.display = 'none';
+            closeModal();
         }
     });
 });
+
