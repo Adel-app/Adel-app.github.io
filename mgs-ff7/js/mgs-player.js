@@ -1,56 +1,49 @@
-
 ; (function ($) {
-	$.fn.mgsCodec = function (options) {
-		var defaults = {
-			interval_speed: 500,
-			animation_timeout: 1500,
-			transcription: '.transcription p'
-		},
-			opts = $.extend(defaults, options),
-			self = this,
-			notes = this.find(opts.transcription),
-			current_note = 0,
-			volume_indicator = this.find('#svg-volume-indicator-total'),
-			max_volume = volume_indicator.height();
-		notes.hide();
+    $.fn.mgsCodec = function (options) {
+        const defaults = {
+                intervalSpeed: 500,
+                animationTimeout: 1500,
+                transcription: '.transcription p'
+            },
+            opts = $.extend(defaults, options),
+            self = this,
+            notes = this.find(opts.transcription),
+            volumeIndicator = this.find('#svg-volume-indicator-total'),
+            maxVolume = volumeIndicator.height();
 
-		this.find('img').hide();
+        let currentNote = 0;
 
-		function triggerClick() {
-			// advance dialogue to next note
-			notes.eq(current_note).fadeIn(200);
+        notes.hide();
+        this.find('img').hide();
 
-			// hide previous
-			notes.eq(current_note).prevAll().hide(100);
+        function triggerClick() {
+            notes.eq(currentNote).fadeIn(200);
+            notes.eq(currentNote).prevAll().hide(100);
+            currentNote += 1;
+            return;
+        }
 
-			// increment forward
-			current_note += 1;
-			return;
-		}
+        function animateCodecBar() {
+            volumeIndicator.height(Math.random() * maxVolume);
+            return;
+        }
 
-		function animateCodecBar() {
-			// randomize the height of the bar to simulate volume
-			volume_indicator.height(Math.random() * max_volume);
-			return;
-		}
+        function init() {
+            self.find('img').each(function (k, elem) {
+                const _elem = $(elem);
+                _elem.fadeIn(400);
+            });
 
-		function init() {
-			self.find('img').each(function (k, elem) {
-				var _elem = $(elem);
-				_elem.fadeIn(400);
-			});
+            notes.eq(0).show();
 
-			// show first note
-			notes.eq(0).show();
+            self.on('click', triggerClick);
 
-			self.on('click', triggerClick);
+            setTimeout(function () {
+                setInterval(animateCodecBar, opts.intervalSpeed);
+            }, opts.animationTimeout);
+            return;
+        }
 
-			setTimeout(function () {
-				setInterval(animateCodecBar, opts.interval_speed);
-			}, opts.animation_timeout);
-			return;
-		}
-
-		this.hide().slideToggle(200, init);
-	};
+        this.hide().slideToggle(200, init);
+    };
 })(jQuery);
