@@ -1,11 +1,11 @@
 (function () {
-    const navBtn = $('.nav-btn');
-    const dataContainers = $('.data-container');
+    let navBtn = $('.nav-btn');
+    let dataContainers = $('.data-container');
 
     function toggleView(target) {
         $(dataContainers).hide();
 
-        const text = $("[data-container='" + target + "'] h2").text();
+        let text = $("[data-container='" + target + "'] h2").text();
         $("[data-container='" + target + "'] h2").text('_');
 
         $("[data-container='" + target + "']").show();
@@ -24,7 +24,7 @@
         })(0);
     }
     $(navBtn).on('click', function (ev) {
-        const target = $(this).attr('data-target');
+        let target = $(this).attr('data-target');
         toggleView(target);
     });
 
